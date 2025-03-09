@@ -230,9 +230,17 @@ class Calendar {
         this.selectedDate = null;
         this.selectedTimeSlot = null;
         this.confirmButton = document.getElementById('confirm-booking');
+
+        // 要素の存在チェック
+        if (!this.currentMonth || !this.calendarDays || !this.selectedDateDisplay || 
+            !this.prevMonthBtn || !this.nextMonthBtn || !this.confirmButton) {
+            console.warn('カレンダーの必要な要素が見つかりません');
+            return;
+        }
     }
 
     init() {
+        if (!this.currentMonth) return; // 必要な要素がない場合は初期化をスキップ
         this.render();
         this.addEventListeners();
         this.setupTimeSlots();
