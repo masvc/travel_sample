@@ -1,0 +1,200 @@
+/* カスタムカラー */
+:root {
+    --color-primary: #00B4D8;
+    --color-secondary: #F4D03F;
+    --color-accent: #D4AF37;
+    --color-dark: #1B4B82;
+}
+
+/* 基本スタイル */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    color: #333;
+    line-height: 1.6;
+}
+
+/* ヘッダー */
+header {
+    transition: all 0.3s ease;
+}
+
+header.scrolled {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* スライダー */
+.swiper-button-next,
+.swiper-button-prev {
+    color: white !important;
+    background: rgba(0, 0, 0, 0.3);
+    width: 50px !important;
+    height: 50px !important;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+    font-size: 20px !important;
+}
+
+.swiper-pagination {
+    bottom: 30px !important;
+}
+
+.swiper-pagination-bullet {
+    width: 12px !important;
+    height: 12px !important;
+    background: white !important;
+    opacity: 0.5;
+    transition: all 0.3s ease;
+}
+
+.swiper-pagination-bullet-active {
+    opacity: 1 !important;
+    background: white !important;
+    transform: scale(1.2);
+}
+
+/* スライドコンテンツのアニメーション */
+.swiper-slide .absolute.inset-0.flex {
+    transition: all 1s ease;
+}
+
+/* セクション */
+section {
+    position: relative;
+    overflow: hidden;
+}
+
+/* アニメーション */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ボタン */
+.btn {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background: var(--color-primary);
+    color: white;
+}
+
+.btn-primary:hover {
+    background: var(--color-dark);
+}
+
+/* カード */
+.card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* モーダル */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.modal.active {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
+}
+
+.modal-content {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    max-width: 90%;
+    max-height: 90vh;
+    overflow-y: auto;
+    transform: translateY(20px);
+    transition: transform 0.3s ease;
+}
+
+.modal.active .modal-content {
+    transform: translateY(0);
+}
+
+/* フォーム要素のスタイル */
+input, textarea {
+    transition: all 0.3s ease;
+}
+
+input:focus, textarea:focus {
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 2px rgba(0, 180, 216, 0.2);
+}
+
+/* 予約ボタン */
+#reservation-button {
+    box-shadow: 0 4px 12px rgba(0, 180, 216, 0.3);
+}
+
+#reservation-button:hover {
+    box-shadow: 0 6px 16px rgba(0, 180, 216, 0.4);
+}
+
+/* モバイルメニュー */
+#mobile-menu {
+    transition: all 0.3s ease-in-out;
+    transform-origin: top;
+}
+
+#mobile-menu.hidden {
+    transform: scaleY(0);
+    opacity: 0;
+}
+
+#mobile-menu:not(.hidden) {
+    transform: scaleY(1);
+    opacity: 1;
+}
+
+/* モバイルメニューボタン */
+#mobile-menu-button {
+    transition: transform 0.3s ease;
+}
+
+#mobile-menu-button.active {
+    transform: rotate(90deg);
+} 

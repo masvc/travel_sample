@@ -1,0 +1,95 @@
+/* モバイルファースト */
+@media (max-width: 640px) {
+    /* ヘッダー */
+    header nav {
+        padding: 1rem;
+    }
+
+    /* メインビジュアル */
+    .swiper-button-next,
+    .swiper-button-prev {
+        display: none;
+    }
+
+    /* セクション */
+    section {
+        padding: 3rem 1rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    /* グリッド */
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* カード */
+    .card {
+        margin-bottom: 1.5rem;
+    }
+}
+
+/* タブレット */
+@media (min-width: 641px) and (max-width: 1024px) {
+    /* グリッド */
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* セクション */
+    section {
+        padding: 4rem 2rem;
+    }
+}
+
+/* デスクトップ */
+@media (min-width: 1025px) {
+    .container {
+        max-width: 1200px;
+    }
+}
+
+/* 大画面 */
+@media (min-width: 1440px) {
+    .container {
+        max-width: 1400px;
+    }
+}
+
+/* 高解像度ディスプレイ */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    img {
+        image-rendering: -webkit-optimize-contrast;
+    }
+}
+
+/* ダークモード */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #1a1a1a;
+        color: #ffffff;
+    }
+
+    .card {
+        background-color: #2d2d2d;
+    }
+}
+
+/* 印刷用スタイル */
+@media print {
+    header,
+    footer,
+    .no-print {
+        display: none;
+    }
+
+    body {
+        color: #000;
+    }
+
+    a {
+        text-decoration: none;
+    }
+} 

@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>モルディブ旅行 | 富裕層向けオーダーメイド旅行提案サービス</title>
+    <meta name="description" content="モルディブ現地の専門家による、富裕層向けのオーダーメイド旅行提案サービス。20年以上の経験を活かした、他社には真似できない高品質なサービスを提供。">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body class="font-sans">
+    <!-- ヘッダー -->
+    <header class="fixed w-full bg-white/95 backdrop-blur-sm z-50 shadow-sm">
+        <nav class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <div class="text-2xl font-bold text-[#00B4D8]">Maldives Travel</div>
+                <!-- 言語切り替えボタン -->
+                <div class="hidden md:flex items-center space-x-2 mr-8">
+                    <button class="lang-btn px-3 py-1 rounded-md text-sm font-medium bg-gray-100 text-gray-800 hover:bg-[#00B4D8] hover:text-white transition-all" data-lang="ja">日本語</button>
+                    <span class="text-gray-300">|</span>
+                    <button class="lang-btn px-3 py-1 rounded-md text-sm font-medium bg-gray-100 text-gray-800 hover:bg-[#00B4D8] hover:text-white transition-all" data-lang="en">English</button>
+                </div>
+                <!-- モバイルメニューボタン -->
+                <button id="mobile-menu-button" class="md:hidden text-gray-700 hover:text-[#00B4D8]">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+                <!-- デスクトップメニュー -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="#resorts" class="text-gray-800 hover:text-[#00B4D8]">リゾート</a>
+                    <a href="#activities" class="text-gray-800 hover:text-[#00B4D8]">アクティビティ</a>
+                    <a href="#contact" class="text-gray-800 hover:text-[#00B4D8]">お問い合わせ</a>
+                </div>
+            </div>
+            <!-- モバイルメニュー -->
+            <div id="mobile-menu" class="hidden md:hidden mt-2">
+                <div class="px-2 pt-2 pb-3 space-y-1">
+                    <!-- モバイル言語切り替え -->
+                    <div class="flex space-x-2 mb-2">
+                        <button class="lang-btn flex-1 px-3 py-2 text-sm font-medium bg-gray-100 text-gray-800 hover:bg-[#00B4D8] hover:text-white transition-all rounded-md" data-lang="ja">日本語</button>
+                        <button class="lang-btn flex-1 px-3 py-2 text-sm font-medium bg-gray-100 text-gray-800 hover:bg-[#00B4D8] hover:text-white transition-all rounded-md" data-lang="en">English</button>
+                    </div>
+                    <a href="#resorts" class="block px-3 py-2 text-gray-700 hover:text-[#00B4D8] hover:bg-gray-50 rounded-md">リゾート</a>
+                    <a href="#activities" class="block px-3 py-2 text-gray-700 hover:text-[#00B4D8] hover:bg-gray-50 rounded-md">アクティビティ</a>
+                    <a href="#contact" class="block px-3 py-2 text-gray-700 hover:text-[#00B4D8] hover:bg-gray-50 rounded-md">お問い合わせ</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- メインビジュアル -->
+    <section class="relative h-screen overflow-hidden">
+        <!-- 斜めの装飾 -->
+        <div class="absolute inset-0 z-10">
+            <div class="absolute bottom-0 left-0 w-full h-32 bg-gray-50 transform -skew-y-6 origin-bottom-right translate-y-16"></div>
+            <!-- 追加の装飾要素 -->
+            <div class="absolute top-0 left-0 w-1/3 h-full bg-gradient-to-r from-[#00B4D8]/30 to-transparent transform -skew-x-12"></div>
+            <div class="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-[#1B4B82]/30 to-transparent transform skew-x-12"></div>
+        </div>
+        
+        <div class="swiper mainSwiper h-full">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide relative">
+                    <div class="absolute inset-0 bg-gradient-to-r from-black/40 to-transparent z-10"></div>
+                    <img src="img/1.webp" alt="モルディブの美しい海" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 flex flex-col items-start justify-center text-white px-8 md:px-16 lg:px-24 z-20">
+                        <div class="max-w-3xl space-y-6">
+                            <h1 class="text-5xl md:text-7xl font-bold leading-tight">
+                                <span class="block transform translate-y-4 opacity-0 transition-all duration-1000 delay-300">Maldives Travel</span>
+                            </h1>
+                            <p class="text-xl md:text-2xl transform translate-y-4 opacity-0 transition-all duration-1000 delay-500">
+                                弊社でご予約いただき、<br>モルディブの特別プランを<br>お楽しみください
+                            </p>
+                            <div class="transform translate-y-4 opacity-0 transition-all duration-1000 delay-700">
+                                <a href="#contact" class="inline-block bg-white text-[#00B4D8] px-8 py-3 rounded-full text-lg font-semibold hover:bg-[#00B4D8] hover:text-white transition-all duration-300">
+                                    お問い合わせはこちら
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide relative">
+                    <div class="absolute inset-0 bg-gradient-to-r from-black/40 to-transparent z-10"></div>
+                    <img src="img/2.webp" alt="ラグジュアリーな水上ヴィラ" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 flex flex-col items-start justify-center text-white px-8 md:px-16 lg:px-24 z-20">
+                        <div class="max-w-3xl space-y-6">
+                            <h2 class="text-4xl md:text-6xl font-bold leading-tight">
+                                <span class="block transform translate-y-4 opacity-0 transition-all duration-1000 delay-300">最高級の水上ヴィラ</span>
+                            </h2>
+                            <p class="text-xl md:text-2xl transform translate-y-4 opacity-0 transition-all duration-1000 delay-500">
+                                プライベートな贅沢な空間で<br>特別なひとときを
+                            </p>
+                            <div class="transform translate-y-4 opacity-0 transition-all duration-1000 delay-700">
+                                <a href="#resorts" class="inline-block bg-white text-[#00B4D8] px-8 py-3 rounded-full text-lg font-semibold hover:bg-[#00B4D8] hover:text-white transition-all duration-300">
+                                    リゾートを見る
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide relative">
+                    <div class="absolute inset-0 bg-gradient-to-r from-black/40 to-transparent z-10"></div>
+                    <img src="img/3.webp" alt="マリンアクティビティ" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 flex flex-col items-start justify-center text-white px-8 md:px-16 lg:px-24 z-20">
+                        <div class="max-w-3xl space-y-6">
+                            <h2 class="text-4xl md:text-6xl font-bold leading-tight">
+                                <span class="block transform translate-y-4 opacity-0 transition-all duration-1000 delay-300">マリンアクティビティ</span>
+                            </h2>
+                            <p class="text-xl md:text-2xl transform translate-y-4 opacity-0 transition-all duration-1000 delay-500">
+                                世界最高のダイビングスポットで<br>特別な体験を
+                            </p>
+                            <div class="transform translate-y-4 opacity-0 transition-all duration-1000 delay-700">
+                                <a href="#activities" class="inline-block bg-white text-[#00B4D8] px-8 py-3 rounded-full text-lg font-semibold hover:bg-[#00B4D8] hover:text-white transition-all duration-300">
+                                    アクティビティを見る
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide relative">
+                    <div class="absolute inset-0 bg-gradient-to-r from-black/40 to-transparent z-10"></div>
+                    <img src="img/4.webp" alt="サンセットビュー" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 flex flex-col items-start justify-center text-white px-8 md:px-16 lg:px-24 z-20">
+                        <div class="max-w-3xl space-y-6">
+                            <h2 class="text-4xl md:text-6xl font-bold leading-tight">
+                                <span class="block transform translate-y-4 opacity-0 transition-all duration-1000 delay-300">至福のひととき</span>
+                            </h2>
+                            <p class="text-xl md:text-2xl transform translate-y-4 opacity-0 transition-all duration-1000 delay-500">
+                                美しいサンセットと共に<br>特別な思い出を
+                            </p>
+                            <div class="transform translate-y-4 opacity-0 transition-all duration-1000 delay-700">
+                                <a href="#contact" class="inline-block bg-white text-[#00B4D8] px-8 py-3 rounded-full text-lg font-semibold hover:bg-[#00B4D8] hover:text-white transition-all duration-300">
+                                    プランを相談する
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- カスタムページネーション -->
+            <div class="absolute bottom-32 left-1/2 transform -translate-x-1/2 z-20">
+                <div class="swiper-pagination !static flex gap-4"></div>
+            </div>
+        </div>
+        
+        <!-- 追加の装飾要素 -->
+        <div class="absolute bottom-0 right-0 w-1/4 h-32 bg-gradient-to-l from-[#00B4D8]/20 to-transparent transform skew-y-12"></div>
+        <div class="absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-black/30 to-transparent"></div>
+    </section>
+
+    <!-- コンセプト -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-12 text-gray-800">コンセプト</h2>
+            <div class="grid md:grid-cols-2 gap-12">
+                <div class="bg-white p-8 rounded-xl shadow-lg">
+                    <h3 class="text-2xl font-bold mb-4 text-[#00B4D8]">現地専門家による提案</h3>
+                    <p class="text-gray-700">20年以上の経験を活かした、他社には真似できない高品質なサービスを提供します。</p>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-lg">
+                    <h3 class="text-2xl font-bold mb-4 text-[#00B4D8]">オーダーメイドプラン</h3>
+                    <p class="text-gray-700">お客様のご要望に合わせた、完全カスタマイズの旅行プランをご提案します。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- トラベルコンシェルジュ -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-4 text-gray-800">トラベルコンシェルジュ</h2>
+            <p class="text-center text-gray-600 mb-12">経験豊富なコンシェルジュが、お客様の理想の旅をサポートいたします</p>
+            <div class="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition-all duration-300">
+                    <div class="relative h-80">
+                        <img src="ConciergeA.png" alt="トラベルコンシェルジュ" class="w-full h-full object-cover">
+                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-[#465B73]/90 to-transparent p-6">
+                            <h3 class="text-xl font-bold text-white mb-1">Michael Thompson</h3>
+                            <p class="text-gray-200">シニアトラベルコンシェルジュ</p>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-600 mb-4">モルディブでの15年以上の経験を活かし、お客様一人一人のニーズに合わせた最高級の旅行プランをご提案いたします。</p>
+                        <div class="flex items-center text-[#00B4D8]">
+                            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                            </svg>
+                            <span class="text-sm">michael@maldives-travel.com</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition-all duration-300">
+                    <div class="relative h-80">
+                        <img src="ConciergeB.png" alt="トラベルコンシェルジュ" class="w-full h-full object-cover">
+                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-[#465B73]/90 to-transparent p-6">
+                            <h3 class="text-xl font-bold text-white mb-1">Sarah Williams</h3>
+                            <p class="text-gray-200">ラグジュアリートラベルスペシャリスト</p>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-600 mb-4">ラグジュアリーホテルでの経験を活かし、お客様の特別な記念日や大切な方との思い出作りをお手伝いいたします。</p>
+                        <div class="flex items-center text-[#00B4D8]">
+                            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                            </svg>
+                            <span class="text-sm">sarah@maldives-travel.com</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- WhatsAppボタン -->
+            <div class="flex justify-center mt-12">
+                <a href="https://wa.me/960XXXXXXX" class="flex items-center bg-[#25D366] text-white px-8 py-4 rounded-full hover:bg-[#128C7E] transition-all duration-300 shadow-lg">
+                    <svg class="w-6 h-6 mr-3" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                    </svg>
+                    <span class="font-bold">WhatsAppでお問い合わせ</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 動画ギャラリー -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-12 text-gray-800">モルディブの魅力</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="card fade-in bg-gray-50 rounded-xl overflow-hidden shadow-lg">
+                    <video class="w-full h-64 object-cover" controls poster="img/12.webp">
+                        <source src="movies/1.mov" type="video/quicktime">
+                        お使いのブラウザは動画の再生に対応していません。
+                    </video>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-gray-800">ラグジュアリーな滞在</h3>
+                        <p class="text-gray-600">水上ヴィラでの贅沢なひととき</p>
+                    </div>
+                </div>
+                <div class="card fade-in bg-gray-50 rounded-xl overflow-hidden shadow-lg">
+                    <video class="w-full h-64 object-cover" controls poster="img/13.webp">
+                        <source src="movies/2.mov" type="video/quicktime">
+                        お使いのブラウザは動画の再生に対応していません。
+                    </video>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-gray-800">マリンアクティビティ</h3>
+                        <p class="text-gray-600">美しい海での特別な体験</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- おすすめリゾート -->
+    <section id="resorts" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-12 text-gray-800">おすすめリゾート</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="card fade-in bg-white rounded-xl overflow-hidden shadow-lg">
+                    <img src="img/5.webp" alt="リゾート1" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-gray-800">ラグジュアリーリゾートA</h3>
+                        <p class="text-gray-600 mb-4">水上ヴィラとプライベートビーチを備えた最高級リゾート</p>
+                        <button class="bg-[#00B4D8] text-white px-6 py-2 rounded-lg hover:bg-[#0095B3] transition-all duration-300">詳細を見る</button>
+                    </div>
+                </div>
+                <div class="card fade-in bg-white rounded-xl overflow-hidden shadow-lg">
+                    <img src="img/6.webp" alt="リゾート2" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-gray-800">プレミアムリゾートB</h3>
+                        <p class="text-gray-600 mb-4">世界最高峰のスパとダイニングを提供</p>
+                        <button class="bg-[#00B4D8] text-white px-6 py-2 rounded-lg hover:bg-[#0095B3] transition-all duration-300">詳細を見る</button>
+                    </div>
+                </div>
+                <div class="card fade-in bg-white rounded-xl overflow-hidden shadow-lg">
+                    <img src="img/7.webp" alt="リゾート3" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-gray-800">エクスクルーシブリゾートC</h3>
+                        <p class="text-gray-600 mb-4">プライベートアイランドでの贅沢な滞在</p>
+                        <button class="bg-[#00B4D8] text-white px-6 py-2 rounded-lg hover:bg-[#0095B3] transition-all duration-300">詳細を見る</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- アクティビティ -->
+    <section id="activities" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-12 text-gray-800">アクティビティ</h2>
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="card fade-in bg-gray-50 rounded-xl overflow-hidden shadow-lg">
+                    <img src="img/8.webp" alt="スキューバダイビング" class="w-full h-32 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-lg font-bold mb-2 text-gray-800">スキューバダイビング</h3>
+                        <p class="text-gray-600">世界最高のダイビングスポット</p>
+                    </div>
+                </div>
+                <div class="card fade-in bg-gray-50 rounded-xl overflow-hidden shadow-lg">
+                    <img src="img/9.webp" alt="シュノーケリング" class="w-full h-32 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-lg font-bold mb-2 text-gray-800">シュノーケリング</h3>
+                        <p class="text-gray-600">美しいサンゴ礁と熱帯魚</p>
+                    </div>
+                </div>
+                <div class="card fade-in bg-gray-50 rounded-xl overflow-hidden shadow-lg">
+                    <img src="img/10.webp" alt="ヨットクルーズ" class="w-full h-32 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-lg font-bold mb-2 text-gray-800">ヨットクルーズ</h3>
+                        <p class="text-gray-600">プライベートな海上体験</p>
+                    </div>
+                </div>
+                <div class="card fade-in bg-gray-50 rounded-xl overflow-hidden shadow-lg">
+                    <img src="img/11.webp" alt="スパトリートメント" class="w-full h-32 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-lg font-bold mb-2 text-gray-800">スパトリートメント</h3>
+                        <p class="text-gray-600">最高級のリラクゼーション</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- お問い合わせ -->
+    <section id="contact" class="py-20 bg-gradient-to-b from-gray-50 to-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-4 text-gray-800">ご予約・お問い合わせ</h2>
+            <p class="text-center text-gray-600 mb-12">下記フォームより、ご希望の日程をお選びください</p>
+            <div class="max-w-4xl mx-auto">
+                <div class="bg-white p-8 md:p-12 rounded-2xl shadow-xl">
+                    <div class="grid md:grid-cols-2 gap-12">
+                        <!-- カレンダー部分 -->
+                        <div class="calendar-container bg-[#465B73] p-6 rounded-xl text-white">
+                            <div class="flex justify-between items-center mb-6">
+                                <button id="prev-month" class="text-white hover:text-gray-200 p-2 transition-all">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                                    </svg>
+                                </button>
+                                <h3 id="current-month" class="text-lg font-bold text-white"></h3>
+                                <button id="next-month" class="text-white hover:text-gray-200 p-2 transition-all">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="grid grid-cols-7 gap-1 mb-4">
+                                <div class="text-center text-sm font-bold text-white">日</div>
+                                <div class="text-center text-sm font-bold text-white">月</div>
+                                <div class="text-center text-sm font-bold text-white">火</div>
+                                <div class="text-center text-sm font-bold text-white">水</div>
+                                <div class="text-center text-sm font-bold text-white">木</div>
+                                <div class="text-center text-sm font-bold text-white">金</div>
+                                <div class="text-center text-sm font-bold text-white">土</div>
+                            </div>
+                            <div id="calendar-days" class="grid grid-cols-7 gap-1 place-items-center">
+                                <!-- 日付はJavaScriptで動的に生成 -->
+                            </div>
+                        </div>
+
+                        <!-- 予約フォーム部分 -->
+                        <div class="space-y-6">
+                            <div>
+                                <label class="block text-sm font-bold text-gray-700 mb-2">お時間はどれくらいいただけますか？</label>
+                                <input type="text" value="15分" class="w-full px-4 py-3 border-2 border-gray-200 rounded-lg bg-gray-50 text-gray-700 font-medium focus:outline-none focus:border-[#00B4D8] transition-all" readonly>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-bold text-gray-700 mb-2">ご都合の良い時間をご指定ください。</label>
+                                <p class="text-sm text-gray-600 mb-4">2025年3月14日の時間を表示しています</p>
+                                <div class="space-y-2">
+                                    <button class="w-full px-4 py-3 border-2 border-gray-200 rounded-lg text-gray-700 hover:border-[#00B4D8] hover:bg-gray-50 transition-all text-center">17:00</button>
+                                    <button class="w-full px-4 py-3 border-2 border-gray-200 rounded-lg text-gray-700 hover:border-[#00B4D8] hover:bg-gray-50 transition-all text-center">17:15</button>
+                                    <button class="w-full px-4 py-3 border-2 border-gray-200 rounded-lg text-gray-700 hover:border-[#00B4D8] hover:bg-gray-50 transition-all text-center">17:30</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- フッター -->
+    <footer class="bg-[#1B4B82] text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4 text-white">Maldives Travel</h3>
+                    <p class="text-gray-200">富裕層向けオーダーメイド旅行提案サービス</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4 text-white">お問い合わせ</h3>
+                    <p class="text-gray-200">Email: info@maldives-travel.com</p>
+                    <p class="text-gray-200">Tel: +960 XXX XXXX</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4 text-white">SNS</h3>
+                    <div class="flex space-x-4">
+                        <!-- SNSアイコンは後で追加 -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 予約ボタン -->
+    <div class="fixed bottom-8 right-8 z-50">
+        <button id="reservation-button" class="bg-[#00B4D8] text-white rounded-full p-4 shadow-lg hover:bg-[#1B4B82] transition-all duration-300 transform hover:scale-110">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+            </svg>
+        </button>
+    </div>
+
+    <!-- 予約モーダル -->
+    <div id="reservation-modal" class="modal">
+        <div class="modal-content bg-white rounded-lg shadow-xl max-w-md w-full mx-4">
+            <div class="p-6">
+                <div class="flex justify-between items-center mb-6">
+                    <h3 class="text-2xl font-bold text-[#00B4D8]">ご予約・お問い合わせ</h3>
+                    <button id="close-modal" class="text-gray-500 hover:text-gray-700">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                        </svg>
+                    </button>
+                </div>
+                <div class="space-y-4">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">お名前</label>
+                        <input type="text" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#00B4D8]">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">メールアドレス</label>
+                        <input type="email" class="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:outline-none focus:border-[#00B4D8] transition-all" placeholder="例：example@email.com">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">ご希望の旅行時期</label>
+                        <input type="date" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#00B4D8]">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">ご要望</label>
+                        <textarea class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#00B4D8] h-32"></textarea>
+                    </div>
+                    <button class="w-full bg-[#00B4D8] text-white py-2 px-4 rounded-md hover:bg-[#1B4B82] transition-colors duration-300">
+                        送信する
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
+
+    <!-- 構造化データ -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "url": "https://maldives-travel.com",
+        "email": "info@maldives-travel.com",
+        "name": "Maldives Travel",
+        "telephone": "+960 XXX XXXX",
+        "image": "https://maldives-travel.com/img/logo.png",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Ma. Santana Tower, Chaandhanee Magu",
+            "addressLocality": "Malé",
+            "addressCountry": "MV"
+        }
+    }
+    </script>
+
+    <!-- スタイルの追加 -->
+    <style>
+        .swiper-pagination-bullet {
+            transition: all 0.3s ease;
+            background: rgba(255, 255, 255, 0.3);
+        }
+        .swiper-pagination-bullet-active {
+            background: #fff;
+            transform: scaleX(1.5);
+        }
+        .calendar-day {
+            @apply w-10 h-10 flex items-center justify-center text-sm font-medium rounded-full cursor-pointer transition-all duration-200 text-white hover:bg-white/20;
+        }
+        .calendar-day:not(.disabled):hover {
+            @apply transform scale-105;
+        }
+        .calendar-day.selected {
+            @apply bg-white text-[#465B73] font-bold;
+        }
+        .calendar-day.disabled {
+            @apply text-gray-400/50 cursor-not-allowed;
+        }
+        .calendar-day.today {
+            @apply ring-2 ring-white ring-offset-2 ring-offset-[#465B73] font-bold;
+        }
+        .calendar-day:not(.disabled):active {
+            @apply transform scale-95;
+        }
+        .btn-primary {
+            @apply bg-[#00B4D8] text-white px-6 py-2 rounded-lg hover:bg-[#0095B3] transition-all duration-300;
+        }
+        .card {
+            @apply transition-all duration-300 hover:shadow-xl;
+        }
+        .lang-btn.active {
+            @apply bg-[#00B4D8] text-white;
+        }
+    </style>
+</body>
+</html> 
